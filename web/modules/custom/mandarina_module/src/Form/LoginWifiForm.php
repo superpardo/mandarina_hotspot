@@ -173,7 +173,7 @@ class LoginWifiForm extends FormBase{
     }
     
     public function submitForm(array &$form, FormStateInterface $form_state) {
-        if($_GET['debug'] == 1 ){
+        if( isset($_GET['debug']) && $_GET['debug'] == 1 ){
             sleep(5);
         }else{
             $token = FuncionesGenerales::login();
