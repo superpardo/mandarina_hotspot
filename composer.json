@@ -19,6 +19,7 @@
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-project-message": "^9",
         "drupal/core-recommended": "^9",
+        "drupal/simplenews": "^3.0@beta",
         "drush/drush": "^10.2"
     },
     "conflict": {
