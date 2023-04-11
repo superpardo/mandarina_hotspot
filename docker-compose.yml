@@ -1,7 +1,7 @@
 version: "3.9"
 services:
-  production_coolturate_php:
-    container_name: 'production_coolturate_php'
+  production_mandarina_php:
+    container_name: 'production_mandarina_php'
     image: wodby/drupal-php:8.1
     restart: always
     environment:
@@ -18,16 +18,16 @@ services:
       - SYS_PTRACE
     volumes:
       - ./:/var/www/html
-  production_coolturate_nginx:
-    container_name: 'production_coolturate_nginx'
+  production_mandarina_nginx:
+    container_name: 'production_mandarina_nginx'
     image: wodby/nginx:latest
     depends_on:
-      - production_coolturate_php
+      - production_mandarina_php
     environment:
       NGINX_CLIENT_MAX_BODY_SIZE: 128m
       NGINX_STATIC_CONTENT_OPEN_FILE_CACHE: "off"
       NGINX_ERROR_LOG_LEVEL: error
-      NGINX_BACKEND_HOST: production_coolturate_php
+      NGINX_BACKEND_HOST: production_mandarina_php
       NGINX_BACKEND_PORT: 9000
       NGINX_SERVER_ROOT: /var/www/html
       NGINX_WORKER_CONNECTIONS: 1024
@@ -53,19 +53,19 @@ services:
       NGINX_GZIP_MIN_LENGTH: 1024
     restart: always
     ports:
-      - "57.128.86.224:8080:8080"
-      - "57.128.86.224:443:443"
+      - "57.128.86.224:9080:8080"
+      - "57.128.86.224:943:443"
     volumes:
       - ./:/var/www/html
       - ./docker-config/nginx/mime.types:/etc/nginx/mime.types
-  production_coolturate_varnish:
+  production_mandarina_varnish:
     image: wodby/varnish
-    container_name: 'production_coolturate_varnish'
+    container_name: 'production_mandarina_varnish'
     depends_on:
-      - production_coolturate_nginx
+      - production_mandarina_nginx
     environment:
       VARNISH_SECRET: secret
-      VARNISH_BACKEND_HOST: production_coolturate_nginx
+      VARNISH_BACKEND_HOST: production_mandarina_nginx
       VARNISH_BACKEND_PORT: 8080
       VARNISHD_MEMORY_SIZE: 4G
       VARNISH_BACKEND_FIRST_BYTE_TIMEOUT: 15s
@@ -74,11 +74,11 @@ services:
       VARNISH_CONFIG_PRESET: drupal
     restart: always
     ports:
-      - "57.128.86.224:80:6081"
-      - "57.128.86.224:6082:6082"
+      - "57.128.86.224:90:6081"
+      - "57.128.86.224:9082:6082"
     volumes:
       - ./docker-config/varnish/default.vcl:/etc/default.vcl
       - /etc/timezone:/etc/timezone
 volumes:
-  production_coolturate_nginx:
+  production_mandarina_nginx:
     driver: local

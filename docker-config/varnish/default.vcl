@@ -2,7 +2,7 @@ vcl 4.0;
 
 # Default backend definition. Points to Apache, normally.
 backend default {
-    .host = "production_coolturate_nginx";
+    .host = "production_mandarina_nginx";
     .port = "8080";
     .first_byte_timeout     = 60s;   # How long to wait before we receive a first byte from our backend?
     .connect_timeout        = 60s;     # How long to wait for a backend connection?
