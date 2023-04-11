@@ -1,0 +1,7 @@
+mandarina.login_wifi:
+  path: '/login/wifi'
+  defaults:
+    _form: '\Drupal\mandarina_module\Form\LoginWifiForm'
+    _title: 'Login'
+  requirements:
+    _permission: 'access content'

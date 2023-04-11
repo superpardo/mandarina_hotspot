@@ -1,0 +1,7 @@
+name: 'Mandarina Module'
+type: module
+description: 'Módulo para personalizar el sitio interno de Mandarina'
+project: 'mandarina_module'
+package: mandarina
+version: '9.0.0'
+core_version_requirement: 9.x

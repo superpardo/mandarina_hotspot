@@ -1,0 +1,5 @@
+services:
+  mandarina_module.negotiator.admin_theme:
+    class: Drupal\mandarina_module\Theme\MandarinaThemeNegotiator
+    tags:
+      - { name: theme_negotiator, priority: 10 }

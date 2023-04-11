@@ -1,0 +1,8 @@
+wait:
+  js:
+    js/wait.js: {}
+  dependencies:
+    - bootstrap4-js-latest
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
