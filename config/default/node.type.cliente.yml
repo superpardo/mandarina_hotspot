@@ -1,0 +1,18 @@
+uuid: 41bfb20e-5b9c-40af-8164-e3cb3b920d66
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Cliente
+type: cliente
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

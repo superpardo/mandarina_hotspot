@@ -1,0 +1,23 @@
+uuid: 9334bd3e-3278-4157-8715-cdeeeb45e7f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.cliente
+  module:
+    - text
+id: node.cliente.body
+field_name: body
+entity_type: node
+bundle: cliente
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

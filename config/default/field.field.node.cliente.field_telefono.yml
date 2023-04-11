@@ -1,0 +1,21 @@
+uuid: 83e0e83c-52dd-4c44-9819-35caee1bea83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_telefono
+    - node.type.cliente
+  module:
+    - text
+id: node.cliente.field_telefono
+field_name: field_telefono
+entity_type: node
+bundle: cliente
+label: Telefono
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

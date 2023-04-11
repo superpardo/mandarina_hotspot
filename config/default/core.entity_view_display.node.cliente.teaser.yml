@@ -1,0 +1,38 @@
+uuid: 439d3d62-4e65-4c82-bcb5-2bd8a10dafa4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.cliente.body
+    - field.field.node.cliente.field_apellido
+    - field.field.node.cliente.field_email
+    - field.field.node.cliente.field_fecha_nacimiento
+    - field.field.node.cliente.field_telefono
+    - node.type.cliente
+  module:
+    - text
+    - user
+id: node.cliente.teaser
+targetEntityType: node
+bundle: cliente
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_apellido: true
+  field_email: true
+  field_fecha_nacimiento: true
+  field_telefono: true

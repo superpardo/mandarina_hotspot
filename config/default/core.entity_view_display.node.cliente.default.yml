@@ -1,0 +1,63 @@
+uuid: 7d4fea20-82f8-469a-93de-7191bbea4897
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.cliente.body
+    - field.field.node.cliente.field_apellido
+    - field.field.node.cliente.field_email
+    - field.field.node.cliente.field_fecha_nacimiento
+    - field.field.node.cliente.field_telefono
+    - node.type.cliente
+  module:
+    - datetime
+    - text
+    - user
+id: node.cliente.default
+targetEntityType: node
+bundle: cliente
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_apellido:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_fecha_nacimiento:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_telefono:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

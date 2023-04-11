@@ -1,0 +1,21 @@
+uuid: cb9036eb-d0a7-459a-abda-19241ce31d2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_nacimiento
+    - node.type.cliente
+  module:
+    - datetime
+id: node.cliente.field_fecha_nacimiento
+field_name: field_fecha_nacimiento
+entity_type: node
+bundle: cliente
+label: 'Fecha nacimiento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
