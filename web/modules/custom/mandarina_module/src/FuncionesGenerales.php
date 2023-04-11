@@ -11,9 +11,9 @@ use Drupal\node\Entity\Node;
 
 class FuncionesGenerales
 {
-    const CONTROLLER_SERVER = "https://192.168.0.146:8043";
-    const OPERATOR_USER = "invitados";
-    const OPERATOR_PASSWORD = "m4nd4r1n4.2021";
+    const CONTROLLER_SERVER = "https://wap.tplinkcloud.com";
+    const OPERATOR_USER = "superpardo@gmail.com";
+    const OPERATOR_PASSWORD = "m4nd4r1n4.1234";
     const COOKIE_FILE_PATH = "cookie.txt";
     const TOKEN_FILE_PATH = "csrfToken.txt";
     
